@@ -7,9 +7,7 @@ public class CameraFollow : MonoBehaviour
 
     public Transform carTransform;
     public Rigidbody carRigidbody;
-    [Range(1, 10)]
     public float followSpeed = 2;
-    [Range(1, 10)]
     public float lookSpeed = 5;
     public float baseDistanceBehindCar = 5.0f; // Base distance behind the car
     public float heightAboveCar = 2.0f;        // Height above the car
