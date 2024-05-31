@@ -8,8 +8,14 @@ public class EnterCar : MonoBehaviour
     public GameObject carCamera;
     public GameObject player;
 
+    public GameObject playerObject;
+
     public bool enter = false;
     public bool inCar = false;
+
+    public GameObject driver;
+
+    public GameObject spawnPoint;
 
     public void Update()
     {
@@ -24,15 +30,24 @@ public class EnterCar : MonoBehaviour
                 player.SetActive(false);
 
                 inCar = true;
+
+                driver.SetActive(true);
             }
             else if (inCar)
             {
                 Debug.Log("Exiting car");
                 car.enabled = false;
                 carCamera.SetActive(false);
+
+                playerObject.transform.localPosition = Vector3.zero;
+
+                player.transform.position = spawnPoint.transform.position;
+
                 player.SetActive(true);
 
                 inCar = false;
+
+                driver.SetActive(false);
             }
         }
     }
