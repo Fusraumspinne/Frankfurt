@@ -11,6 +11,10 @@ TagManager:
   - Ramp
   - BodyShot
   - Ladder
+  - Kurve
+  - Stop
+  - Gerade
+  - VorKurve
   layers:
   - Default
   - TransparentFX
