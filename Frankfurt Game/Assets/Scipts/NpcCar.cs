@@ -18,8 +18,13 @@ public class NpcCar : MonoBehaviour
     public float speed;
     public AnimationCurve steeringCurve;
 
-    public Transform[] waypoints;
-    private int currentWaypointIndex = 0;
+    public Transform initialWaypoint;
+    private Transform currentWaypoint;
+
+    private void Start()
+    {
+        currentWaypoint = initialWaypoint;
+    }
 
     private void Update()
     {
@@ -33,52 +38,54 @@ public class NpcCar : MonoBehaviour
 
     void FollowWaypoints()
     {
-        if (waypoints.Length == 0)
+        if (currentWaypoint == null)
             return;
 
-        Transform currentWaypoint = waypoints[currentWaypointIndex];
         Vector3 target = currentWaypoint.position;
         Vector3 direction = target - transform.position;
-        direction.y = 0; // Ignore the height difference
+        direction.y = 0; 
 
-        // Get the angle between the forward direction and the target direction
         float angle = Vector3.SignedAngle(transform.forward, direction, Vector3.up);
         steeringInput = Mathf.Clamp(angle / 45f, -1f, 1f);
 
         if (direction.magnitude < 1f)
         {
-            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+            Waypoint waypointComponent = currentWaypoint.GetComponent<Waypoint>();
+            if (waypointComponent != null && waypointComponent.nextWaypoints.Count > 0)
+            {
+                int randomIndex = UnityEngine.Random.Range(0, waypointComponent.nextWaypoints.Count);
+                Transform nextWaypoint = waypointComponent.nextWaypoints[randomIndex].transform;
+
+                currentWaypoint = nextWaypoint;
+            }
         }
 
-        // Check if the waypoint has specific tags
         if (currentWaypoint.CompareTag("Stop"))
         {
-            gasInput = 0f; // Stop the car
-            brakeInput = 1f; // Apply full brakes
+            gasInput = 0f; 
+            brakeInput = 1f; 
         }
         else if (currentWaypoint.CompareTag("Kurve"))
         {
-            gasInput = 0.1f; // Reduce speed for the curve
-            brakeInput = 0f; // Apply some brakes
+            gasInput = 0.1f; 
+            brakeInput = 0f; 
         }
         else if (currentWaypoint.CompareTag("VorKurve"))
         {
-            gasInput = 0.1f; // Reduce speed for the curve
-            brakeInput = 0.003f; // Apply some brakes
+            gasInput = 0.1f; 
+            brakeInput = 0.003f;
         }
         else if (currentWaypoint.CompareTag("Gerade"))
         {
-            gasInput = 0.3f; // Increase speed on straight paths
-            brakeInput = 0f; // No braking
+            gasInput = 0.3f; 
+            brakeInput = 0f; 
         }
         else
         {
-            gasInput = 0.3f; // Default acceleration
-            brakeInput = 0f; // No braking for now
+            gasInput = 0.3f; 
+            brakeInput = 0f; 
         }
     }
-
-
 
     void ApplyBrake()
     {
