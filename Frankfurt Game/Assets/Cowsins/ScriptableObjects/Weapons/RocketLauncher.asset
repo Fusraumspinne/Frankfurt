@@ -50,7 +50,7 @@ MonoBehaviour:
   aimingFOV: 45
   allowAimingIfReloading: 0
   movementSpeedWhileAiming: 6
-  setMovementSpeedWhileAiming: 1
+  setMovementSpeedWhileAiming: 0
   crosshairResize: 40
   crosshairPreset: {fileID: 2655988077585873504, guid: 339dc1e687484c544b2b203166ea9a5f, type: 2}
   applyBulletSpread: 1
@@ -159,6 +159,7 @@ MonoBehaviour:
     emptyMagReload: {fileID: 8300000, guid: 1f0d11e2f60ab0942af5c83cefe099f2, type: 3}
     emptyMagShoot: {fileID: 8300000, guid: 5959d65463fbfe342a9219287eb7315f, type: 3}
   pitchVariationFiringSFX: 0.15
+  grapplesFromTip: 0
   camShakeAmount: 0.15
   camShakeAimMultiplier: 0.8
   camShakeCrouchMultiplier: 0.8
@@ -172,4 +173,4 @@ MonoBehaviour:
   attackRange: 1.91
   dontShowMagazine: 0
   currentPreset: {fileID: 0}
-  presetName: 
+  presetName: RocketLauncherPreset

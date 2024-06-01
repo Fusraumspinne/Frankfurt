@@ -50,7 +50,7 @@ MonoBehaviour:
   aimingFOV: 45
   allowAimingIfReloading: 0
   movementSpeedWhileAiming: 6
-  setMovementSpeedWhileAiming: 1
+  setMovementSpeedWhileAiming: 0
   crosshairResize: 40
   crosshairPreset: {fileID: 2655988077585873504, guid: 339dc1e687484c544b2b203166ea9a5f, type: 2}
   applyBulletSpread: 1
@@ -173,4 +173,4 @@ MonoBehaviour:
   attackRange: 1.91
   dontShowMagazine: 0
   currentPreset: {fileID: 0}
-  presetName: 
+  presetName: PistolePreset

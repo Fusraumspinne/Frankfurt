@@ -6,7 +6,7 @@ Preset:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShotgunPreset
+  m_Name: RevolverPreset
   m_TargetType:
     m_NativeTypeID: 114
     m_ManagedTypePPtr: {fileID: 11500000, guid: d01ed731769af95429c32ba164942b3e, type: 3}
@@ -27,30 +27,30 @@ Preset:
   - target: {fileID: 0}
     propertyPath: weaponObject
     value: 
-    objectReference: {fileID: 4366474878721369578, guid: 866bf6803807eff4cad16e0ebed2e8f8, type: 3}
+    objectReference: {fileID: 4366474878721369578, guid: 2e64c751c6b081045973e5c86b16952a, type: 3}
   - target: {fileID: 0}
     propertyPath: _name
-    value: Shotgun
+    value: Revolver
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: pickUpGraphics
     value: 
-    objectReference: {fileID: 2092819957812016947, guid: 5f0b070383feac14d98e11a8628abf20, type: 3}
+    objectReference: {fileID: 2092819957812016947, guid: 8d1761b2a54f6bd41993764e9be34f9d, type: 3}
   - target: {fileID: 0}
     propertyPath: icon
     value: 
-    objectReference: {fileID: 21300000, guid: 15745d5342e0447468f077b4299353cd, type: 3}
+    objectReference: {fileID: 21300000, guid: 2c2f8b61c4f418e46bbc0385c3e252e7, type: 3}
   - target: {fileID: 0}
     propertyPath: shootStyle
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: shootMethod
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: holdProgressSpeed
-    value: 0
+    value: 700
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: reloadStyle
@@ -70,7 +70,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: bulletDuration
-    value: 0
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: speed
@@ -78,7 +78,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: explosionOnHit
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: hurtsPlayer
@@ -86,35 +86,35 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: explosionRadius
-    value: 0
+    value: 10
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: explosionForce
-    value: 0
+    value: 5
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: explosionVFX
     value: 
-    objectReference: {fileID: 0}
+    objectReference: {fileID: 5018994898019192216, guid: ab977a440365d1c4092c15552e5ff157, type: 3}
   - target: {fileID: 0}
     propertyPath: continuousFire
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: fireRate
-    value: 1.2
+    value: 0.35
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: reloadTime
-    value: 3
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: coolSpeed
-    value: 1
+    value: 0.3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: cooledPercentageAfterOverheat
-    value: 0
+    value: 0.6
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: infiniteBullets
@@ -122,11 +122,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: magazineSize
-    value: 4
+    value: 6
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: bulletsPerFire
-    value: 3
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ammoCostPerFire
@@ -146,7 +146,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: penetrationDamageReduction
-    value: 0.91
+    value: 0.579
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: allowAim
@@ -154,7 +154,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: aimDistance
-    value: 0.2
+    value: 0.3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: aimingRotation.x
@@ -166,15 +166,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: aimingRotation.z
-    value: -7
+    value: -6
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: aimingSpeed
-    value: 10
+    value: 14.3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: aimingFOV
-    value: 30
+    value: 45
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: allowAimingIfReloading
@@ -195,7 +195,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: crosshairPreset
     value: 
-    objectReference: {fileID: 2655988077585873504, guid: c578889a819b05c4aacc11a6abb692ac, type: 2}
+    objectReference: {fileID: 2655988077585873504, guid: 339dc1e687484c544b2b203166ea9a5f, type: 2}
   - target: {fileID: 0}
     propertyPath: applyBulletSpread
     value: 1
@@ -206,23 +206,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: spreadAmount
-    value: 0.06
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: aimSpreadAmount
-    value: 0
+    value: 0.01
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: weightMultiplier
-    value: 1.3
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: applyRecoil
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.size
-    value: 3
+    value: 4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[0].time
@@ -234,11 +234,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[0].inSlope
-    value: -0.07648395
+    value: 0.12671255
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[0].outSlope
-    value: -0.07648395
+    value: 0.12671255
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[0].tangentMode
@@ -258,23 +258,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[1].time
-    value: 0.47126475
+    value: 0.11722936
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[1].value
-    value: -0.036044188
+    value: 0.014854431
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[1].inSlope
-    value: -0.0041566864
+    value: 0.08717621
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[1].outSlope
-    value: -0.0041566864
+    value: 0.08717621
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[1].tangentMode
-    value: 34
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[1].weightedMode
@@ -286,27 +286,27 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[1].outWeight
-    value: 0.33333334
+    value: 0.096715815
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].time
-    value: 1
+    value: 0.31043607
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].value
-    value: 0
+    value: -0.013479859
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].inSlope
-    value: 0.06817058
+    value: 0.07768841
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].outSlope
-    value: 0.06817058
+    value: 0.07768841
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].tangentMode
-    value: 34
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].weightedMode
@@ -314,10 +314,42 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].inWeight
-    value: 0.33333334
+    value: 0.18840523
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilX.m_Curve.Array.data[2].outWeight
+    value: 0.093630046
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].time
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].value
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].inSlope
+    value: 0.01954838
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].outSlope
+    value: 0.01954838
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].tangentMode
+    value: 34
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].weightedMode
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].inWeight
+    value: 0.33333334
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: recoilX.m_Curve.Array.data[3].outWeight
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
@@ -334,7 +366,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.size
-    value: 9
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[0].time
@@ -346,11 +378,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[0].inSlope
-    value: 12.398543
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[0].outSlope
-    value: 12.398543
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[0].tangentMode
@@ -366,27 +398,27 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[0].outWeight
-    value: 0.33333334
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].time
-    value: 0.07381806
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].value
-    value: 0.9152364
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].inSlope
-    value: -0.36987326
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].outSlope
-    value: -0.36987326
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].tangentMode
-    value: 0
+    value: 34
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].weightedMode
@@ -394,234 +426,10 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].inWeight
-    value: 0.33333334
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilY.m_Curve.Array.data[1].outWeight
-    value: 0.076515175
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].time
-    value: 1
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].value
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].inSlope
-    value: -0.578739
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].outSlope
-    value: -0.578739
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].tangentMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].weightedMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].inWeight
-    value: 0.09186734
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[2].outWeight
-    value: 0.33333334
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].time
-    value: 1.0697343
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].value
-    value: 0.9350196
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].inSlope
-    value: -0.61847085
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].outSlope
-    value: -0.61847085
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].tangentMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].weightedMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].inWeight
-    value: 0.33333334
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[3].outWeight
-    value: 0.075663775
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].time
-    value: 2.0069935
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].value
-    value: 0.1013951
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].inSlope
-    value: -0.51304924
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].outSlope
-    value: -0.51304924
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].tangentMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].weightedMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].inWeight
-    value: 0.11957938
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[4].outWeight
-    value: 0.33333334
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].time
-    value: 2.0433092
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].value
-    value: 0.93551964
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].inSlope
-    value: -0.49461997
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].outSlope
-    value: -0.49461997
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].tangentMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].weightedMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].inWeight
-    value: 0.33333334
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[5].outWeight
-    value: 0.12601003
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].time
-    value: 3.001908
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].value
-    value: 0.2551587
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].inSlope
-    value: -0.6326548
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].outSlope
-    value: -0.6326548
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].tangentMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].weightedMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].inWeight
-    value: 0.19429722
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[6].outWeight
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].time
-    value: 3.0638802
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].value
-    value: 0.9660983
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].inSlope
-    value: -0.12939645
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].outSlope
-    value: -0.12939645
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].tangentMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].weightedMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].inWeight
-    value: 0.33333334
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[7].outWeight
-    value: 0.33333334
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].time
-    value: 4.0058913
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].value
-    value: 0.22104496
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].inSlope
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].outSlope
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].tangentMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].weightedMode
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].inWeight
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: recoilY.m_Curve.Array.data[8].outWeight
     value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
@@ -638,27 +446,27 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: xRecoilAmount
-    value: 10
+    value: 80
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: yRecoilAmount
-    value: 8
+    value: 10
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: recoilRelaxSpeed
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: applyDifferentRecoilOnAiming
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: xRecoilAmountOnAiming
-    value: 0
+    value: 40
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: yRecoilAmountOnAiming
-    value: 0
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: damagePerBullet
@@ -670,11 +478,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: minimumDistanceToApplyDamageReduction
-    value: 0
+    value: 40.3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: damageReductionMultiplier
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: criticalDamageMultiplier
@@ -715,7 +523,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: bulletHoleImpact.mudImpact
     value: 
-    objectReference: {fileID: 2462405574108921655, guid: e6d36bb0ebdf6cc4dacdeee8b6e8a0ce, type: 3}
+    objectReference: {fileID: 2462405574108921655, guid: 4445bafd3b5e24c4eb41ba27f6a44af4, type: 3}
   - target: {fileID: 0}
     propertyPath: bulletHoleImpact.woodImpact
     value: 
@@ -739,7 +547,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: audioSFX.firing
     value: 
-    objectReference: {fileID: 8300000, guid: 6f4d5573a385d3948aa1f08a5621c9cb, type: 3}
+    objectReference: {fileID: 8300000, guid: ad694c80fef44284ebf7396fb31d059c, type: 3}
   - target: {fileID: 0}
     propertyPath: audioSFX.holster
     value: 
@@ -747,15 +555,15 @@ Preset:
   - target: {fileID: 0}
     propertyPath: audioSFX.unholster
     value: 
-    objectReference: {fileID: 8300000, guid: b2c939ee2ab26a14b81d51fe66235d2f, type: 3}
+    objectReference: {fileID: 8300000, guid: 2715072491e670e4dbefa8f3c1004c30, type: 3}
   - target: {fileID: 0}
     propertyPath: audioSFX.reload
     value: 
-    objectReference: {fileID: 8300000, guid: a6daf74610796b94fbb00af219b281db, type: 3}
+    objectReference: {fileID: 8300000, guid: 64f2c936c4a2e31499ea708df2383b01, type: 3}
   - target: {fileID: 0}
     propertyPath: audioSFX.emptyMagReload
     value: 
-    objectReference: {fileID: 8300000, guid: a6daf74610796b94fbb00af219b281db, type: 3}
+    objectReference: {fileID: 8300000, guid: 64f2c936c4a2e31499ea708df2383b01, type: 3}
   - target: {fileID: 0}
     propertyPath: audioSFX.emptyMagShoot
     value: 
@@ -770,7 +578,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: camShakeAmount
-    value: 0.21
+    value: 0.15
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: camShakeAimMultiplier
@@ -798,11 +606,11 @@ Preset:
     objectReference: {fileID: 1436881700163988445, guid: 72fbb691dea891c45a6caa10b437b857, type: 3}
   - target: {fileID: 0}
     propertyPath: damagePerHit
-    value: 0
+    value: 12
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: attackRate
-    value: 0
+    value: 1.36
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: hitDelay
@@ -810,7 +618,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: attackRange
-    value: 0
+    value: 1.91
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: dontShowMagazine
@@ -822,6 +630,6 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: presetName
-    value: ShotgunPreset
+    value: RevolverPreset
     objectReference: {fileID: 0}
   m_ExcludedProperties: []

@@ -50,7 +50,7 @@ MonoBehaviour:
   aimingFOV: 38
   allowAimingIfReloading: 0
   movementSpeedWhileAiming: 6
-  setMovementSpeedWhileAiming: 1
+  setMovementSpeedWhileAiming: 0
   crosshairResize: 40
   crosshairPreset: {fileID: 2655988077585873504, guid: c578889a819b05c4aacc11a6abb692ac, type: 2}
   applyBulletSpread: 1

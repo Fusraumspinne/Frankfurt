@@ -50,7 +50,7 @@ MonoBehaviour:
   aimingFOV: 30
   allowAimingIfReloading: 0
   movementSpeedWhileAiming: 6
-  setMovementSpeedWhileAiming: 1
+  setMovementSpeedWhileAiming: 0
   crosshairResize: 40
   crosshairPreset: {fileID: 2655988077585873504, guid: c578889a819b05c4aacc11a6abb692ac, type: 2}
   applyBulletSpread: 1
@@ -213,6 +213,7 @@ MonoBehaviour:
     emptyMagReload: {fileID: 8300000, guid: a6daf74610796b94fbb00af219b281db, type: 3}
     emptyMagShoot: {fileID: 8300000, guid: 5959d65463fbfe342a9219287eb7315f, type: 3}
   pitchVariationFiringSFX: 0.15
+  grapplesFromTip: 0
   camShakeAmount: 0.21
   camShakeAimMultiplier: 0.8
   camShakeCrouchMultiplier: 0.8
