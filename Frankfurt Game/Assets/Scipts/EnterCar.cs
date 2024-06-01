@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnterCar : MonoBehaviour
 {
+    public Rigidbody body;
+    public WheelColliders colliders;
+
     public MonoBehaviour car;
-    public GameObject carCamera;
     public GameObject player;
 
     public GameObject playerObject;
@@ -17,6 +19,10 @@ public class EnterCar : MonoBehaviour
 
     public GameObject spawnPoint;
 
+    public Camera firstPerson;
+    public Camera thirdPerson;
+
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -26,7 +32,8 @@ public class EnterCar : MonoBehaviour
             {
                 Debug.Log("Entering car");
                 car.enabled = true;
-                carCamera.SetActive(true);
+                firstPerson.enabled = true;
+                thirdPerson.enabled = false;
                 player.SetActive(false);
 
                 inCar = true;
@@ -37,7 +44,8 @@ public class EnterCar : MonoBehaviour
             {
                 Debug.Log("Exiting car");
                 car.enabled = false;
-                carCamera.SetActive(false);
+                firstPerson.enabled = false;
+                thirdPerson.enabled = false;
 
                 playerObject.transform.localPosition = Vector3.zero;
 
@@ -48,8 +56,43 @@ public class EnterCar : MonoBehaviour
                 inCar = false;
 
                 driver.SetActive(false);
+
+                StopCar();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            if(inCar)
+            {
+                if (firstPerson.enabled == true)
+                {
+                    thirdPerson.enabled = true; 
+                    firstPerson.enabled = false;
+                } 
+                else
+                {
+                    firstPerson.enabled = true;
+                    thirdPerson.enabled = false;
+                }
+            }
+        }
+    }
+
+    void StopCar()
+    {
+        colliders.FRWheel.motorTorque = 0;
+        colliders.FLWheel.motorTorque = 0;
+        colliders.RRWheel.motorTorque = 0;
+        colliders.RLWheel.motorTorque = 0;
+
+        colliders.FRWheel.brakeTorque = Mathf.Infinity;
+        colliders.FLWheel.brakeTorque = Mathf.Infinity;
+        colliders.RRWheel.brakeTorque = Mathf.Infinity;
+        colliders.RLWheel.brakeTorque = Mathf.Infinity;
+
+        body.velocity = Vector3.zero;
+        body.angularVelocity = Vector3.zero;
     }
 
     public void OnTriggerEnter(Collider other)

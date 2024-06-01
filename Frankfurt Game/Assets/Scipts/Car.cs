@@ -17,7 +17,6 @@ public class Car : MonoBehaviour
     public float speed;
     public AnimationCurve steeringCurve;
 
-
     private void Update()
     {
         speed = body.velocity.magnitude;
