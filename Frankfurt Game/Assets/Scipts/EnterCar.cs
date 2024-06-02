@@ -22,6 +22,9 @@ public class EnterCar : MonoBehaviour
     public Camera firstPerson;
     public Camera thirdPerson;
 
+    public AudioListener firstPersonAudio;
+    public AudioListener thirdPersonAudio;
+
 
     public void Update()
     {
@@ -33,7 +36,9 @@ public class EnterCar : MonoBehaviour
                 Debug.Log("Entering car");
                 car.enabled = true;
                 firstPerson.enabled = true;
+                firstPersonAudio.enabled = true;
                 thirdPerson.enabled = false;
+                thirdPersonAudio.enabled = false;
                 player.SetActive(false);
 
                 inCar = true;
@@ -45,7 +50,9 @@ public class EnterCar : MonoBehaviour
                 Debug.Log("Exiting car");
                 car.enabled = false;
                 firstPerson.enabled = false;
+                firstPersonAudio.enabled = false;    
                 thirdPerson.enabled = false;
+                thirdPersonAudio.enabled = false;
 
                 playerObject.transform.localPosition = Vector3.zero;
 
@@ -68,12 +75,17 @@ public class EnterCar : MonoBehaviour
                 if (firstPerson.enabled == true)
                 {
                     thirdPerson.enabled = true; 
+                    thirdPersonAudio.enabled = true;
                     firstPerson.enabled = false;
+                    firstPersonAudio.enabled = false;
                 } 
                 else
                 {
                     firstPerson.enabled = true;
+                    firstPersonAudio.enabled = true;
                     thirdPerson.enabled = false;
+                    thirdPersonAudio.enabled= false;
+
                 }
             }
         }
