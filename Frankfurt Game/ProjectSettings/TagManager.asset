@@ -15,6 +15,7 @@ TagManager:
   - Stop
   - Gerade
   - VorKurve
+  - Car
   layers:
   - Default
   - TransparentFX
@@ -33,7 +34,7 @@ TagManager:
   - UITop
   - PostProcessing
   - Effects
-  - 
+  - Trigger
   - 
   - 
   - 

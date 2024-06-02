@@ -21,9 +21,38 @@ public class NpcCar : MonoBehaviour
     public Transform initialWaypoint;
     private Transform currentWaypoint;
 
+    public bool crash;
+
+    public float cooldownTime;
+    private float lastTriggerTime;
+    public bool stop‹berschreiben;
+    public bool inVorKurve;
+    public bool isTiming;
+
+
     private void Start()
     {
+        initialWaypoint = FindNearestWaypointWithTag("Gerade");
         currentWaypoint = initialWaypoint;
+    }
+
+    Transform FindNearestWaypointWithTag(string tag)
+    {
+        GameObject[] waypoints = GameObject.FindGameObjectsWithTag(tag);
+        Transform nearestWaypoint = null;
+        float nearestDistance = Mathf.Infinity;
+
+        foreach (GameObject waypoint in waypoints)
+        {
+            float distance = Vector3.Distance(transform.position, waypoint.transform.position);
+            if (distance < nearestDistance)
+            {
+                nearestDistance = distance;
+                nearestWaypoint = waypoint.transform;
+            }
+        }
+
+        return nearestWaypoint;
     }
 
     private void Update()
@@ -34,6 +63,11 @@ public class NpcCar : MonoBehaviour
         ApplyMotor();
         ApplySteering();
         ApplyBrake();
+
+        if (Time.time > lastTriggerTime + cooldownTime && inVorKurve)
+        {
+            stop‹berschreiben = true;
+        }
     }
 
     void FollowWaypoints()
@@ -63,27 +97,67 @@ public class NpcCar : MonoBehaviour
         if (currentWaypoint.CompareTag("Stop"))
         {
             gasInput = 0f; 
-            brakeInput = 1f; 
+            brakeInput = 1f;
+            inVorKurve = false;
+            isTiming = false;
+            stop‹berschreiben = false;
         }
         else if (currentWaypoint.CompareTag("Kurve"))
         {
-            gasInput = 0.1f; 
-            brakeInput = 0f; 
+            if(!crash)
+            {
+                gasInput = 0.1f; 
+                brakeInput = 0f;
+                inVorKurve = false;
+                isTiming = false;
+                stop‹berschreiben = false;
+            }
         }
         else if (currentWaypoint.CompareTag("VorKurve"))
         {
-            gasInput = 0.1f; 
-            brakeInput = 0.003f;
+            inVorKurve = true;
+
+            if (!crash)
+            {
+                if(!stop‹berschreiben)
+                {
+                    gasInput = 0f; 
+                    brakeInput = 0.75f;
+
+                    if (!isTiming)
+                    {
+                        isTiming = true;
+                        lastTriggerTime = Time.time;
+                    }
+                }
+                else
+                {
+                    gasInput = 0.1f;
+                    brakeInput = 0f;
+                }
+            }
         }
         else if (currentWaypoint.CompareTag("Gerade"))
         {
-            gasInput = 0.3f; 
-            brakeInput = 0f; 
+            if (!crash)
+            {
+                gasInput = 0.15f; 
+                brakeInput = 0f;
+                inVorKurve = false;
+                isTiming = false;
+                stop‹berschreiben = false;
+            }
         }
         else
         {
-            gasInput = 0.3f; 
-            brakeInput = 0f; 
+            if (!crash)
+            {
+                gasInput = 0.15f; 
+                brakeInput = 0f;
+                inVorKurve = false;
+                isTiming = false;
+                stop‹berschreiben = false;
+            }
         }
     }
 
@@ -125,5 +199,23 @@ public class NpcCar : MonoBehaviour
         collider.GetWorldPose(out position, out quat);
         renderer.transform.position = position;
         renderer.transform.rotation = quat;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Car"))
+        {
+            crash = true;
+            brakeInput = 1f;
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Car"))
+        {
+            crash = false;
+            brakeInput = 0f;
+        }
     }
 }
