@@ -16,6 +16,8 @@ TagManager:
   - Gerade
   - VorKurve
   - Car
+  - Bergauf
+  - Steil
   layers:
   - Default
   - TransparentFX

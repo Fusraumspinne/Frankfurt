@@ -113,6 +113,28 @@ public class NpcCar : MonoBehaviour
                 stop‹berschreiben = false;
             }
         }
+        else if (currentWaypoint.CompareTag("Bergauf"))
+        {
+            if (!crash)
+            {
+                gasInput = 0.3f;
+                brakeInput = 0f;
+                inVorKurve = false;
+                isTiming = false;
+                stop‹berschreiben = false;
+            }
+        }
+        else if (currentWaypoint.CompareTag("Steil"))
+        {
+            if (!crash)
+            {
+                gasInput = 1f;
+                brakeInput = 0f;
+                inVorKurve = false;
+                isTiming = false;
+                stop‹berschreiben = false;
+            }
+        }
         else if (currentWaypoint.CompareTag("VorKurve"))
         {
             inVorKurve = true;
