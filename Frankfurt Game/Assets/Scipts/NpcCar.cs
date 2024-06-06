@@ -29,7 +29,6 @@ public class NpcCar : MonoBehaviour
     public bool inVorKurve;
     public bool isTiming;
 
-
     private void Start()
     {
         initialWaypoint = FindNearestWaypointWithTag("Gerade");
@@ -96,7 +95,7 @@ public class NpcCar : MonoBehaviour
 
         if (currentWaypoint.CompareTag("Stop"))
         {
-            gasInput = 0f; 
+            gasInput = 0f;
             brakeInput = 1f;
             inVorKurve = false;
             isTiming = false;
@@ -104,9 +103,9 @@ public class NpcCar : MonoBehaviour
         }
         else if (currentWaypoint.CompareTag("Kurve"))
         {
-            if(!crash)
+            if (!crash)
             {
-                gasInput = 0.1f; 
+                gasInput = 0.1f;
                 brakeInput = 0f;
                 inVorKurve = false;
                 isTiming = false;
@@ -117,7 +116,7 @@ public class NpcCar : MonoBehaviour
         {
             if (!crash)
             {
-                gasInput = 0.3f;
+                gasInput = 0.4f;
                 brakeInput = 0f;
                 inVorKurve = false;
                 isTiming = false;
@@ -128,7 +127,7 @@ public class NpcCar : MonoBehaviour
         {
             if (!crash)
             {
-                gasInput = 1f;
+                gasInput = 1.25f;
                 brakeInput = 0f;
                 inVorKurve = false;
                 isTiming = false;
@@ -141,10 +140,10 @@ public class NpcCar : MonoBehaviour
 
             if (!crash)
             {
-                if(!stop‹berschreiben)
+                if (!stop‹berschreiben)
                 {
-                    gasInput = 0f; 
-                    brakeInput = 0.75f;
+                    gasInput = 0f;
+                    brakeInput = 0.1f;
 
                     if (!isTiming)
                     {
@@ -163,7 +162,7 @@ public class NpcCar : MonoBehaviour
         {
             if (!crash)
             {
-                gasInput = 0.15f; 
+                gasInput = 0.15f;
                 brakeInput = 0f;
                 inVorKurve = false;
                 isTiming = false;
@@ -174,7 +173,7 @@ public class NpcCar : MonoBehaviour
         {
             if (!crash)
             {
-                gasInput = 0.15f; 
+                gasInput = 0.15f;
                 brakeInput = 0f;
                 inVorKurve = false;
                 isTiming = false;
@@ -224,6 +223,15 @@ public class NpcCar : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Car"))
+        {
+            crash = true;
+            brakeInput = 1f;
+        }
+    }
+
+    public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Car"))
         {

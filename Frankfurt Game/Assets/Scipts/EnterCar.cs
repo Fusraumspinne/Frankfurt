@@ -25,6 +25,8 @@ public class EnterCar : MonoBehaviour
     public AudioListener firstPersonAudio;
     public AudioListener thirdPersonAudio;
 
+    public GameObject crosshair;
+
 
     public void Update()
     {
@@ -44,6 +46,8 @@ public class EnterCar : MonoBehaviour
                 inCar = true;
 
                 driver.SetActive(true);
+
+                crosshair.SetActive(false);
             }
             else if (inCar)
             {
@@ -63,6 +67,8 @@ public class EnterCar : MonoBehaviour
                 inCar = false;
 
                 driver.SetActive(false);
+
+                crosshair.SetActive(false);
 
                 StopCar();
             }
