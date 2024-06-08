@@ -20,8 +20,15 @@ public class WaffenShop : MonoBehaviour
 
     public void Start()
     {
-        PlayerPrefs.SetString(weaponName, "false");
-        PlayerPrefs.Save();
+        if (PlayerPrefs.HasKey(weaponName))
+        {
+            waffeFreigeschaltet = PlayerPrefs.GetString(weaponName);
+
+            if(waffeFreigeschaltet == "true")
+            {
+                EnableWeapon();
+            }
+        }
     }
 
     public void Update()
@@ -33,7 +40,6 @@ public class WaffenShop : MonoBehaviour
 
         GetData();
         ChangeData();
-        EnableWeapon();
     }
 
     public void GetData()
@@ -60,17 +66,16 @@ public class WaffenShop : MonoBehaviour
                 PlayerPrefs.SetInt("Money", newMoney);
                 PlayerPrefs.SetString(weaponName, "true");
                 PlayerPrefs.Save();
+
+                EnableWeapon();
             }
         }
     }
 
     public void EnableWeapon()
     {
-        if(waffeFreigeschaltet == "true")
-        {
-            weapon.SetActive(true);
-            e.SetActive(false);
-        }
+        weapon.SetActive(true);
+        e.SetActive(false);
     }
 
     public void OnTriggerEnter(Collider other)

@@ -8,12 +8,6 @@ public class DataScript : MonoBehaviour
     public int money;
     public TMP_Text textMoney;
 
-    public void Start()
-    {
-        PlayerPrefs.SetInt("Money", 10000);
-        PlayerPrefs.Save();
-    }
-
     public void Update()
     {
         if (PlayerPrefs.HasKey("Money"))
